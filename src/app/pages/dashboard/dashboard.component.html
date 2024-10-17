@@ -1,0 +1,94 @@
+<div class="md:ml-[228px] ml-2 lg:mt-[110px] md:mt-[97px] mt-[92px] 
+mr-3">
+    <div class="bg-white drop-shadow-md rounded-xl md:p-3.5 p-2.5">
+        <div class="flex justify-between items-center">
+            <div class="flex flex-col">
+                <h2 class="md:text-lg text-base font-semibold text-gray-800">Today's Sales</h2>
+                <p class="text-xs">Sale Summary</p>
+            </div>
+            <div class="flex justify-start items-center gap-x-2">
+                <fa-icon [icon]="faCalendarDays" class="md:text-xl text-md text-blue-500"></fa-icon>
+                <p class="md:text-base text-sm">Tue, 05-09-2023</p>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-between items-stretch my-4 md:gap-8 gap-4">
+            <div class="w-full bg-rose-300/40 rounded-lg p-3">
+                <div class="flex justify-between items-start">
+                    <fa-icon [icon]="faChartSimple" class="md:text-2xl text-md text-white font-semibold bg-red-400 px-3.5 rounded-full py-2"></fa-icon>
+                    <div class="lg:text-xl font-mainFont">
+                        <h3 class="font-mono text-right">{{totalLists.totalSales | currency}}</h3>
+                        <p class="text-gray-600">Total Sales</p>
+                    </div>
+                    
+                </div>
+                <p class="mt-2 text-center text-blue-400 font-semibold mb-2 text-sm">{{totalLists.totalSalePercents + '%'}} from yesterday</p>
+            </div>
+            <div class="w-full bg-green-300/40 rounded-lg p-3">
+                <div class="flex justify-between items-start">
+                    <fa-icon [icon]="faFileCirclePlus" class="md:text-2xl text-md text-white font-semibold bg-green-400 px-3.5 rounded-full py-2.5"></fa-icon>
+                    <div class="md:text-xl font-mainFont">
+                        <h3 class="font-mono text-right">{{totalLists.totalOrders}}</h3>
+                        <p class="text-gray-600">Total Orders</p>
+                    </div>
+                    
+                </div>
+                <p class="mt-2 text-center text-blue-400 font-semibold mb-2 text-sm">{{totalLists.totalOrderPercents + ' %'}} from yesterday</p>
+            </div>
+            <div class="w-full bg-purple-300/40 rounded-lg p-3">
+                <div class="flex justify-between items-start">
+                    <fa-icon [icon]="faUser" class="md:text-2xl text-md text-white font-semibold bg-purple-400 px-3.5 rounded-full py-2"></fa-icon>
+                    <div class="md:text-xl font-mainFont">
+                        <h3 class="font-mono text-right">{{totalLists.totalCustomers}}</h3>
+                        <p class="text-gray-600">New Customers</p>
+                    </div>
+                    
+                </div>
+                <p class="mt-2 text-center text-blue-400 font-semibold mb-2 text-sm">{{totalLists.totalCustomerPercents + ' %'}} from yesterday</p>
+            </div>
+            <div class="w-full bg-amber-300/40 rounded-lg p-3">
+                <div class="flex justify-between items-start">
+                    <fa-icon [icon]="faCoins" class="md:text-2xl text-md text-white font-semibold bg-amber-400 px-3.5 rounded-full py-2"></fa-icon>
+                    <div class="md:text-xl font-mainFont">
+                        <h3 class="font-mono text-right">{{totalLists.totalEarnings | currency}}</h3>
+                        <p class="text-gray-600">Total Earnings</p>
+                    </div>
+                    
+                </div>
+                <p class="mt-2 text-center text-blue-400 font-semibold mb-2 text-sm">{{totalLists.totalEarningsPercents + ' %'}} from yesterday</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="my-3.5">
+        <div class="grid lg:grid-cols-7 md:grid-cols-2 grid-cols-1 gap-3 items-stretch">
+            <div class="w-full lg:col-span-2 col-span-1 bg-white drop-shadow-md rounded-xl md:p-3.5 p-2.5">
+                <app-weeklysales [weeklySales]="weeklySales"></app-weeklysales>
+            </div>
+            <div class="w-full col-span-1 bg-white drop-shadow-md rounded-xl md:p-3.5 p-2.5">
+                <app-salechart></app-salechart>
+            </div>
+            <div class="w-full col-span-1 bg-white drop-shadow-md rounded-xl md:p-3.5 p-2.5">
+                <app-profilechart></app-profilechart>
+            </div>  
+            <div class="w-full lg:col-span-3 col-span-1 bg-white drop-shadow-md rounded-xl md:p-3.5 p-2.5">
+                <app-productclass></app-productclass>
+            </div>
+        </div>
+    </div>
+
+    <div class=" my-3.5">
+        <div class="grid lg:grid-cols-7 md:grid-cols-2 grid-cols-1 gap-3 items-stretch">
+            <div class="w-full lg:col-span-2 col-span-1 bg-white drop-shadow-md rounded-xl md:p-3.5 p-2.5">
+                <app-customersatisfaction></app-customersatisfaction>
+            </div>
+            <div class="w-full lg:col-span-3 col-span-1 bg-white drop-shadow-md rounded-xl md:p-3.5 p-2.5">
+                <app-recentorders></app-recentorders>
+            </div>
+            <div class="w-full lg:col-span-2 col-span-1 bg-white drop-shadow-md rounded-xl md:p-3.5 p-2.5">
+                <app-saletarget></app-saletarget>
+            </div>
+        </div>
+    </div>
+</div>

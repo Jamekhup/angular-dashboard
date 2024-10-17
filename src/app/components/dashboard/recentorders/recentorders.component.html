@@ -1,0 +1,89 @@
+<div class="w-full">
+    <div class="flex justify-between items-center mb-1">
+        <h4 class="md:text-lg text-md font-semibold text-gray-600">Recent Orders</h4>
+        <p class="text-blue-600 font-semibold text-sm cursor-pointer">See All</p>
+    </div>
+    <div class="relative overflow-auto">
+        <table class="w-full text-xs">
+            <thead>
+                <tr class="bg-slate-200 rounded-md">
+                    <th class="p-2 text-start text-gray-500 font-semibold">Profile</th>
+                    <th class="p-2 text-start text-gray-500 font-semibold">City</th>
+                    <th class="p-2 text-gray-500 font-semibold">Date</th>
+                    <th class="p-2 text-gray-500 font-semibold">Status</th>
+                    <th class="p-2 text-gray-500 font-semibold">Price</th>
+                </tr>
+            </thead>
+
+           <tbody>
+                <tr>
+                    <td class="p-2 text-gray-500 font-semibold text-start">
+                        <div class="flex justify-start gap-1.5 items-center">
+                            <img src="/assets/images/p_one.png" class="w-6" alt="">
+                            <p>Kupporaj</p>
+                        </div>
+                    </td>
+                    <td class="p-2 text-gray-500 font-semibold text-start">
+                        <div class="flex justify-start gap-1.5 items-center">
+                            <fa-icon [icon]="faLocationDot" class="text-red-500"></fa-icon>
+                            <p>Chennai</p>
+                        </div>
+                    </td>
+                    <td class="p-2 text-gray-500 font-semibold text-center">09-11-2023</td>
+                    <td class="p-2 text-gray-500 font-semibold text-center">
+                        <div class="flex justify-center gap-1.5 items-center">
+                            <fa-icon [icon]="faCircleXmark" class="text-green-500"></fa-icon>
+                            <p>Approved</p>
+                        </div>
+                    </td>
+                    <td class="p-2 text-gray-500 font-semibold text-center">$ 11,500</td>
+                </tr>
+                <tr>
+                    <td class="p-2 text-gray-500 font-semibold text-start">
+                        <div class="flex justify-start gap-1.5 items-center">
+                            <img src="/assets/images/p_two.png" class="w-6" alt="">
+                            <p>Dinesh</p>
+                        </div>
+                    </td>
+                    <td class="p-2 text-gray-500 font-semibold text-start">
+                        <div class="flex justify-start gap-1.5 items-center">
+                            <fa-icon [icon]="faLocationDot" class="text-red-500"></fa-icon>
+                            <p>Coimbatore</p>
+                        </div>
+                    </td>
+                    <td class="p-2 text-gray-500 font-semibold text-center">09-11-2023</td>
+                    <td class="p-2 text-gray-500 font-semibold text-center">
+                        <div class="flex justify-center gap-1.5 items-center">
+                            <fa-icon [icon]="faCircleXmark" class="text-red-500"></fa-icon>
+                            <p>Cancelled</p>
+                        </div>
+                    </td>
+                    <td class="p-2 text-gray-500 font-semibold text-center">$ 12,200</td>
+                </tr>
+                <tr>
+                    <td class="p-2 text-gray-500 font-semibold text-start">
+                        <div class="flex justify-start gap-1.5 items-center">
+                            <img src="/assets/images/p_three.png" class="w-6" alt="">
+                            <p>Jame Khup</p>
+                        </div>
+                    </td>
+                    <td class="p-2 text-gray-500 font-semibold text-start">
+                        <div class="flex justify-start gap-1.5 items-center">
+                            <fa-icon [icon]="faLocationDot" class="text-green-500"></fa-icon>
+                            <p>Bangalore</p>
+                        </div>
+                    </td>
+                    <td class="p-2 text-gray-500 font-semibold text-center">09-11-2023</td>
+                    <td class="p-2 text-gray-500 font-semibold text-center">
+                        <div class="flex justify-center gap-1.5 items-center">
+                            <fa-icon [icon]="faCircleXmark" class="text-green-500"></fa-icon>
+                            <p>Approved</p>
+                        </div>
+                    </td>
+                    <td class="p-2 text-gray-500 font-semibold text-center">$ 34,500</td>
+                </tr>
+           </tbody>
+            
+        </table>
+    </div>
+</div>
